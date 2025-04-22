@@ -385,7 +385,7 @@ export default function PricingPage() {
 
               <div className="border-t p-6">
                 <p className="text-sm text-muted-foreground mb-4">
-                  IdeaForge takes a 10% service fee only when you get paid for a project
+                  Mindlab takes a 10% service fee only when you get paid for a project
                 </p>
                 <Link to="/signup">
                   <Button className="w-full">
@@ -431,7 +431,7 @@ export default function PricingPage() {
                   Do specialists pay to join the platform?
                 </h3>
                 <p className="text-muted-foreground">
-                  No, specialists can join for free. IdeaForge takes a 10% service fee only when
+                  No, specialists can join for free. Mindlab takes a 10% service fee only when
                   specialists get paid for completed projects through our platform.
                 </p>
               </div>

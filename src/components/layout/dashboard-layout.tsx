@@ -77,7 +77,7 @@ export function DashboardLayout({ children, userType }: DashboardLayoutProps) {
                 !sidebarOpen && "hidden"
               }`}
             >
-              IdeaForge
+              Mindlab
             </span>
             <span
               className={`bg-gradient-to-r from-idea-600 to-forge-600 bg-clip-text text-xl font-bold text-transparent ${
@@ -148,7 +148,7 @@ export function DashboardLayout({ children, userType }: DashboardLayoutProps) {
             <Menu className="h-5 w-5" />
           </Button>
           <Link to="/">
-            <span className="text-xl font-bold">IdeaForge</span>
+            <span className="text-xl font-bold">Mindlab</span>
           </Link>
           <ThemeToggle />
         </div>
@@ -161,7 +161,7 @@ export function DashboardLayout({ children, userType }: DashboardLayoutProps) {
           <div className="fixed inset-y-0 left-0 w-3/4 max-w-xs bg-card p-4">
             <div className="flex items-center justify-between mb-6">
               <Link to="/" className="text-xl font-bold">
-                IdeaForge
+                Mindlab
               </Link>
               <Button variant="ghost" size="icon" onClick={toggleMobileSidebar}>
                 <X className="h-5 w-5" />

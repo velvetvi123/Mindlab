@@ -19,7 +19,7 @@ export function HeroSection() {
               </h1>
               <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-lg">
                 Connect with top specialists to transform your innovative ideas into reality. 
-                IdeaForge brings together visionaries and experts for seamless collaboration.
+                Mindlab brings together visionaries and experts for seamless collaboration.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link to="/signup">

@@ -79,7 +79,7 @@ export default function OnboardingSpecialist() {
         <div className="container mx-auto py-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-2xl font-bold text-center mb-2">
-              <span className="gradient-heading">Welcome</span> to IdeaForge
+              <span className="gradient-heading">Welcome</span> to Mindlab
             </h1>
             <p className="text-center text-muted-foreground mb-8">
               Let's set up your specialist profile to showcase your expertise

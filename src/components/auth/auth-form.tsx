@@ -29,7 +29,7 @@ export function AuthForm({ mode, onSuccess }: AuthFormProps) {
         <CardDescription>
           {mode === "login"
             ? "Enter your email and password to access your account"
-            : "Fill out the form below to create your IdeaForge account"}
+            : "Fill out the form below to create your Mindlab account"}
         </CardDescription>
       </CardHeader>
       <CardContent>

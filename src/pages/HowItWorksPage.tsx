@@ -110,7 +110,7 @@ export default function HowItWorksPage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-5xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-              <span className="gradient-heading">How</span> IdeaForge Works
+              <span className="gradient-heading">How</span> Mindlab Works
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-lg text-muted-foreground">
               Our streamlined process connects idea creators with vetted specialists
@@ -174,7 +174,7 @@ export default function HowItWorksPage() {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold">Our Guarantees</h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                We're committed to making your experience with IdeaForge exceptional.
+                We're committed to making your experience with Mindlab exceptional.
                 Here's what you can count on:
               </p>
             </div>
@@ -202,7 +202,7 @@ export default function HowItWorksPage() {
             <h2 className="text-3xl font-bold">Ready to get started?</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               Join thousands of idea creators and specialists already
-              collaborating on IdeaForge to bring innovative ideas to life.
+              collaborating on Mindlab to bring innovative ideas to life.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/signup">

@@ -11,7 +11,7 @@ export default function LoginPage() {
         <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-md mx-auto">
             <h1 className="text-2xl font-bold text-center mb-8">
-              <span className="gradient-heading">Log In</span> to IdeaForge
+              <span className="gradient-heading">Log In</span> to Mindlab
             </h1>
             <AuthForm mode="login" />
           </div>

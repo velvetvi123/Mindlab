@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, Github, Mail, Phone } from "lucide-react";
 
 export function Footer() {
   return (
@@ -10,7 +9,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block">
               <span className="text-2xl font-bold bg-gradient-to-r from-idea-600 to-forge-600 bg-clip-text text-transparent">
-                IdeaForge
+                Mindlab
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground max-w-md">
@@ -135,9 +134,46 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center">
+        <div className="mt-12 border-t border-border pt-8">
+          <div className="flex flex-col items-center space-y-4">
+            <h3 className="text-sm font-semibold uppercase tracking-wider">
+              Developed by
+            </h3>
+            <div className="text-center">
+              <p className="font-medium">Yahya Oubedda</p>
+              <p className="text-sm text-muted-foreground">A passionate Software Engineer</p>
+            </div>
+            <div className="flex space-x-4">
+              <a
+                href="mailto:yahya.oub@gmail.com"
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-1"
+              >
+                <Mail className="h-4 w-4" />
+                <span className="text-sm">yahya.oub@gmail.com</span>
+              </a>
+              <a
+                href="https://github.com/velvetvi123"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-1"
+              >
+                <Github className="h-4 w-4" />
+                <span className="text-sm">velvetvi123</span>
+              </a>
+              <a
+                href="tel:+212619159531"
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-1"
+              >
+                <Phone className="h-4 w-4" />
+                <span className="text-sm">+212 619 159 531</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} IdeaForge. All rights reserved.
+            &copy; {new Date().getFullYear()} Mindlab. All rights reserved.
           </p>
           <div className="mt-4 sm:mt-0 flex space-x-6">
             <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">

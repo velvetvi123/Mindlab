@@ -1,4 +1,3 @@
-
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import {
   Card,
@@ -24,8 +23,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { useState } from "react";
-import { Loader2, Save } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Loader2, Save, Upload } from "lucide-react";
+import { toast } from "sonner";
 
 const profileFormSchema = z.object({
   name: z.string().min(2, {
@@ -49,6 +49,7 @@ type ProfileFormValues = z.infer<typeof profileFormSchema>;
 
 export default function ProfilePage() {
   const [isLoading, setIsLoading] = useState(false);
+  const [profilePicture, setProfilePicture] = useState<string | null>(null);
   
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileFormSchema),
@@ -61,12 +62,52 @@ export default function ProfilePage() {
     },
   });
 
+  // Charger les données depuis le localStorage au démarrage
+  useEffect(() => {
+    const savedProfile = localStorage.getItem('specialistProfile');
+    if (savedProfile) {
+      const profile = JSON.parse(savedProfile);
+      form.reset(profile);
+      if (profile.profilePicture) {
+        setProfilePicture(profile.profilePicture);
+      }
+    }
+  }, [form]);
+
+  const handleProfilePictureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64String = reader.result as string;
+        setProfilePicture(base64String);
+        // Sauvegarder dans le localStorage
+        const currentProfile = localStorage.getItem('specialistProfile');
+        const profile = currentProfile ? JSON.parse(currentProfile) : {};
+        localStorage.setItem('specialistProfile', JSON.stringify({
+          ...profile,
+          profilePicture: base64String
+        }));
+        toast.success("Profile picture updated successfully!");
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   const onSubmit = async (data: ProfileFormValues) => {
     setIsLoading(true);
-    console.log("Profile data submitted:", data);
-    // In a real app, this would save to a backend
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsLoading(false);
+    try {
+      // Sauvegarder dans le localStorage
+      localStorage.setItem('specialistProfile', JSON.stringify({
+        ...data,
+        profilePicture
+      }));
+      toast.success("Profile updated successfully!");
+    } catch (error) {
+      toast.error("Failed to save profile. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -81,16 +122,31 @@ export default function ProfilePage() {
             <CardContent className="pt-6">
               <div className="flex flex-col items-center space-y-4">
                 <Avatar className="h-24 w-24">
-                  <AvatarImage src="/placeholder.svg" alt="Profile picture" />
-                  <AvatarFallback>MC</AvatarFallback>
+                  <AvatarImage src={profilePicture || "/placeholder.svg"} alt="Profile picture" />
+                  <AvatarFallback>{form.getValues('name').split(' ').map(n => n[0]).join('')}</AvatarFallback>
                 </Avatar>
                 <div className="text-center">
-                  <h3 className="text-lg font-medium">Michael Chang</h3>
+                  <h3 className="text-lg font-medium">{form.getValues('name')}</h3>
                   <p className="text-sm text-muted-foreground">Specialist</p>
                 </div>
-                <Button variant="outline" size="sm" className="w-full">
-                  Change Photo
-                </Button>
+                <div className="w-full">
+                  <input
+                    type="file"
+                    id="profile-picture"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={handleProfilePictureChange}
+                  />
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full"
+                    onClick={() => document.getElementById('profile-picture')?.click()}
+                  >
+                    <Upload className="mr-2 h-4 w-4" />
+                    Change Photo
+                  </Button>
+                </div>
               </div>
             </CardContent>
           </Card>

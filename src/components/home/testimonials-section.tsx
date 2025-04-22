@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     content:
-      "IdeaForge helped me find the perfect developer for my app idea. The matching process was seamless, and the quality of talent is exceptional. My project went from concept to launch in half the time I expected.",
+      "Mindlab helped me find the perfect developer for my app idea. The matching process was seamless, and the quality of talent is exceptional. My project went from concept to launch in half the time I expected.",
     author: {
       name: "Sarah Johnson",
       role: "Founder, HealthTrack App",
@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     content:
-      "As a UI/UX designer, IdeaForge has been fantastic for connecting me with innovative projects that match my expertise. The platform's vetting process ensures high-quality clients who value good design.",
+      "As a UI/UX designer, Mindlab has been fantastic for connecting me with innovative projects that match my expertise. The platform's vetting process ensures high-quality clients who value good design.",
     author: {
       name: "Michael Chen",
       role: "Senior UI/UX Designer",
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     content:
-      "The specialist I found through IdeaForge transformed my business. Their marketing expertise helped us increase our conversion rate by 45%. The platform's secure messaging system made collaboration seamless.",
+      "The specialist I found through Mindlab transformed my business. Their marketing expertise helped us increase our conversion rate by 45%. The platform's secure messaging system made collaboration seamless.",
     author: {
       name: "Emma Rodriguez",
       role: "CEO, Bloom E-commerce",
@@ -44,7 +44,7 @@ export function TestimonialsSection() {
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Don't just take our word for it — hear from some of our satisfied users
-            who have successfully collaborated through IdeaForge.
+            who have successfully collaborated through Mindlab.
           </p>
         </div>
 

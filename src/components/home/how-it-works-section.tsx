@@ -44,7 +44,7 @@ export function HowItWorksSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            How IdeaForge Works
+            How Mindlab Works
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
             Our simple 4-step process connects you with the perfect specialists

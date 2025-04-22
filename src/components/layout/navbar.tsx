@@ -20,7 +20,7 @@ export function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-2xl font-bold bg-gradient-to-r from-idea-600 to-forge-600 bg-clip-text text-transparent">
-                IdeaForge
+                Mindlab
               </span>
             </Link>
           </div>

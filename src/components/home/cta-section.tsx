@@ -15,7 +15,7 @@ export function CtaSection() {
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Join thousands of idea creators and specialists who are already transforming
-              innovative concepts into successful realities through IdeaForge.
+              innovative concepts into successful realities through Mindlab.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/signup">

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -19,9 +18,11 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold bg-gradient-to-r from-idea-600 to-forge-600 bg-clip-text text-transparent">
-                Mindlab
-              </span>
+              <img 
+                src="/Mindlab_logo.jpg" 
+                alt="Mindlab Logo" 
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
 
